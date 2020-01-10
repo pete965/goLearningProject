@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d00fe9c-77df-4d1c-bcb7-5e1f3ea71c74" name="Default Changelist" comment="" />
+    <list default="true" id="0d00fe9c-77df-4d1c-bcb7-5e1f3ea71c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../goLearningProject/main/constant.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../goLearningProject/main/for.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goLearningProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../goLearningProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goLearningProject/main/variables.go" beforeDir="false" afterPath="$PROJECT_DIR$/../goLearningProject/main/variables.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../goLearningProject" />
   </component>
   <component name="ProjectId" id="1WCCjc251FVaEnsjguqBmVsz3W0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -42,7 +50,16 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build values.go">
+  <component name="RunManager" selected="Go Build.go build for.go">
+    <configuration name="go build constant.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="firstProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../goLearningProject/main/constant.go" />
+      <package value="firstProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build firstProject/main" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="firstProject" />
       <working_directory value="$PROJECT_DIR$/main" />
@@ -51,6 +68,15 @@
       <filePath value="$PROJECT_DIR$/" />
       <package value="firstProject" />
       <directory value="$PROJECT_DIR$/main" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build for.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="firstProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../goLearningProject/main/for.go" />
+      <package value="firstProject" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <configuration name="go build helloworld.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -71,13 +97,28 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build variables.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="firstProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../goLearningProject/main/variables.go" />
+      <package value="firstProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.go build firstProject/main" />
       <item itemvalue="Go Build.go build helloworld.go" />
       <item itemvalue="Go Build.go build values.go" />
+      <item itemvalue="Go Build.go build variables.go" />
+      <item itemvalue="Go Build.go build constant.go" />
+      <item itemvalue="Go Build.go build for.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build for.go" />
+        <item itemvalue="Go Build.go build constant.go" />
+        <item itemvalue="Go Build.go build variables.go" />
         <item itemvalue="Go Build.go build values.go" />
         <item itemvalue="Go Build.go build helloworld.go" />
       </list>
@@ -98,6 +139,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="320" y="103" key="#GOPATH" timestamp="1578644353826">
       <screen x="0" y="23" width="1440" height="827" />
@@ -111,29 +156,37 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="413" y="79" key="#go_build_helloworld.go/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644661875" />
+    <state x="301" y="37" key="CommitChangelistDialog2" timestamp="1578645081001">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="301" y="37" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578645081001" />
     <state x="370" y="231" key="EditFileWatcherDialog" timestamp="1578644396973">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="370" y="231" key="EditFileWatcherDialog/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644396973" />
-    <state width="1358" height="201" key="GridCell.Tab.0.bottom" timestamp="1578644939845">
+    <state width="1358" height="201" key="GridCell.Tab.0.bottom" timestamp="1578646225880">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644939845" />
-    <state width="1358" height="201" key="GridCell.Tab.0.center" timestamp="1578644939844">
+    <state width="1358" height="201" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646225880" />
+    <state width="1358" height="201" key="GridCell.Tab.0.center" timestamp="1578646225872">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644939844" />
-    <state width="1358" height="201" key="GridCell.Tab.0.left" timestamp="1578644939842">
+    <state width="1358" height="201" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646225872" />
+    <state width="1358" height="201" key="GridCell.Tab.0.left" timestamp="1578646225872">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644939842" />
-    <state width="1358" height="201" key="GridCell.Tab.0.right" timestamp="1578644939845">
+    <state width="1358" height="201" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646225872" />
+    <state width="1358" height="201" key="GridCell.Tab.0.right" timestamp="1578646225873">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state width="1358" height="201" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644939845" />
+    <state width="1358" height="201" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646225873" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1578644430848">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="221" y="75" key="SettingsEditor/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644430848" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1578645145738">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578645145738" />
   </component>
 </project>
