@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d00fe9c-77df-4d1c-bcb7-5e1f3ea71c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/timers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/worker-pools.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +48,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build timers.go">
+  <component name="RunManager" selected="Go Build.go build worker-pools.go">
     <configuration name="go build closing-channels.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="firstProject" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -77,15 +77,6 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build select.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="firstProject" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main/select.go" />
-      <package value="goLearningProject" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build timeouts.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="firstProject" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -104,21 +95,30 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build worker-pools.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="firstProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main/worker-pools.go" />
+      <package value="goLearningProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.go build firstProject/main" />
-      <item itemvalue="Go Build.go build select.go" />
       <item itemvalue="Go Build.go build timeouts.go" />
       <item itemvalue="Go Build.go build non-blocking-channel-operations.go" />
       <item itemvalue="Go Build.go build closing-channels.go" />
       <item itemvalue="Go Build.go build timers.go" />
+      <item itemvalue="Go Build.go build worker-pools.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build worker-pools.go" />
         <item itemvalue="Go Build.go build timers.go" />
         <item itemvalue="Go Build.go build closing-channels.go" />
         <item itemvalue="Go Build.go build non-blocking-channel-operations.go" />
         <item itemvalue="Go Build.go build timeouts.go" />
-        <item itemvalue="Go Build.go build select.go" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,8 @@
     <MESSAGE value="arrays.go maps.go range.go slices.go" />
     <MESSAGE value="methods.go recursion.go pointers.go structs.go" />
     <MESSAGE value="channels" />
-    <option name="LAST_COMMIT_MESSAGE" value="channels" />
+    <MESSAGE value="timers.go" />
+    <option name="LAST_COMMIT_MESSAGE" value="timers.go" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="103" key="#GOPATH" timestamp="1578644353826">
@@ -163,52 +164,52 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="413" y="79" key="#go_build_helloworld.go/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644661875" />
-    <state x="301" y="15" key="CommitChangelistDialog2" timestamp="1578915284876">
+    <state x="301" y="15" key="CommitChangelistDialog2" timestamp="1578916382342">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="301" y="15" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578900128031" />
+    <state x="301" y="15" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916382342" />
     <state x="301" y="37" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646346434" />
     <state x="301" y="15" key="CommitChangelistDialog2/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915284876" />
     <state x="370" y="231" key="EditFileWatcherDialog" timestamp="1578644396973">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="370" y="231" key="EditFileWatcherDialog/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644396973" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1578915314695">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1578916405512">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704024" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578914977888" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405512" />
     <state width="1358" height="201" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370803" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314695" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1578915314694">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1578916405511">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704022" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578914977887" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405511" />
     <state width="1358" height="201" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370803" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314694" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1578915314693">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1578916405510">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704021" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578914977886" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405510" />
     <state width="1358" height="201" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370802" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314693" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1578915314694">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1578916405512">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704023" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578914977888" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405512" />
     <state width="1358" height="201" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370803" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314694" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1578644430848">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="221" y="75" key="SettingsEditor/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644430848" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1578915293684">
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1578916390833">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578900136717" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916390833" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646354224" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915293684" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578899458203">
