@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d00fe9c-77df-4d1c-bcb7-5e1f3ea71c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/collection-functions.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/defer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/panic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/sorting-by-functions.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/sorting.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/stateful-goroutines.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/string-formatting.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/string-functions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/epoch.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/json.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/random-numbers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/regular-expressions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/time-formatting-parsing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/time.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build string-formatting.go">
+  <component name="RunManager" selected="Go Build.go build regular-expressions.go">
     <configuration name="go build defer.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="firstProject" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -84,11 +82,11 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build sorting.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build regular-expressions.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="firstProject" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main/sorting.go" />
+      <filePath value="$PROJECT_DIR$/main/regular-expressions.go" />
       <package value="goLearningProject" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -113,19 +111,19 @@
     </configuration>
     <list>
       <item itemvalue="Go Build.go build firstProject/main" />
-      <item itemvalue="Go Build.go build sorting.go" />
       <item itemvalue="Go Build.go build panic.go" />
       <item itemvalue="Go Build.go build defer.go" />
       <item itemvalue="Go Build.go build string-functions.go" />
       <item itemvalue="Go Build.go build string-formatting.go" />
+      <item itemvalue="Go Build.go build regular-expressions.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build regular-expressions.go" />
         <item itemvalue="Go Build.go build string-formatting.go" />
         <item itemvalue="Go Build.go build string-functions.go" />
         <item itemvalue="Go Build.go build defer.go" />
         <item itemvalue="Go Build.go build panic.go" />
-        <item itemvalue="Go Build.go build sorting.go" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +152,8 @@
     <MESSAGE value="timers.go" />
     <MESSAGE value="worker-pools.go" />
     <MESSAGE value="mutexes.go" />
-    <option name="LAST_COMMIT_MESSAGE" value="mutexes.go" />
+    <MESSAGE value="string-functions.go and etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="string-functions.go and etc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="103" key="#GOPATH" timestamp="1578644353826">
@@ -174,64 +173,70 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="413" y="79" key="#go_build_helloworld.go/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644661875" />
-    <state x="301" y="15" key="CommitChangelistDialog2" timestamp="1579178119770">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="179" y="-1062" key="CommitChangelistDialog2" timestamp="1579424948939">
+      <screen x="-222" y="-1080" width="1920" height="1080" />
     </state>
     <state x="301" y="15" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916382342" />
     <state x="301" y="37" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646346434" />
     <state x="301" y="15" key="CommitChangelistDialog2/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1579178119770" />
+    <state x="179" y="-1062" key="CommitChangelistDialog2/-222.-1080.1920.1080/0.23.1440.877@-222.-1080.1920.1080" timestamp="1579424948939" />
     <state x="301" y="15" key="CommitChangelistDialog2/1440.-300.1048.770/-480.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578974189777" />
     <state x="370" y="231" key="EditFileWatcherDialog" timestamp="1578644396973">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="370" y="231" key="EditFileWatcherDialog/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644396973" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1579424902713">
-      <screen x="-222" y="-1080" width="1920" height="1080" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1579443245591">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704024" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405512" />
     <state width="1358" height="201" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370803" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1057.1920.1057/0.23.1440.831@0.23.1440.831" timestamp="1579092546858" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579424902713" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579425415803" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314695" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1579424902712">
-      <screen x="-222" y="-1080" width="1920" height="1080" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1579443245591" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1579443245588">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704022" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405511" />
     <state width="1358" height="201" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370803" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1057.1920.1057/0.23.1440.831@0.23.1440.831" timestamp="1579092546856" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579424902712" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579425415799" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314694" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1579424902711">
-      <screen x="-222" y="-1080" width="1920" height="1080" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1579443245588" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1579443245587">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704021" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405510" />
     <state width="1358" height="201" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370802" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1057.1920.1057/0.23.1440.831@0.23.1440.831" timestamp="1579092546855" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579424902711" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579425415798" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314693" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1579424902713">
-      <screen x="-222" y="-1080" width="1920" height="1080" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1579443245587" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1579443245589">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.0.1440.851@0.0.1440.851" timestamp="1578907704023" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916405512" />
     <state width="1358" height="201" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646370803" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1057.1920.1057/0.23.1440.831@0.23.1440.831" timestamp="1579092546857" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579424902713" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579425415799" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578915314694" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1579443245589" />
     <state x="73" y="-1012" key="SettingsEditor" timestamp="1579141098363">
       <screen x="-222" y="-1080" width="1920" height="1080" />
     </state>
     <state x="221" y="75" key="SettingsEditor/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644430848" />
     <state x="73" y="-1012" key="SettingsEditor/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579141098363" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1579178129819">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="205" y="-877" key="Vcs.Push.Dialog.v2" timestamp="1579424955428">
+      <screen x="-222" y="-1080" width="1920" height="1080" />
     </state>
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916390833" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646354224" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1579178129819" />
+    <state x="205" y="-877" key="Vcs.Push.Dialog.v2/-222.-1080.1920.1080/0.23.1440.877@-222.-1080.1920.1080" timestamp="1579424955428" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/1440.-300.1048.770/-480.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578974199350" />
     <state x="291" y="-845" width="894" height="812" key="search.everywhere.popup" timestamp="1579260929763">
       <screen x="-222" y="-1080" width="1920" height="1080" />
