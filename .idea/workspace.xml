@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d00fe9c-77df-4d1c-bcb7-5e1f3ea71c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/epoch.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/json.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/random-numbers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/regular-expressions.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/time-formatting-parsing.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/time.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/base64-encoding.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/command-line-arguments.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/command-line-flags.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/environment-variables.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/execing-processes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/exit.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/line-filters.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/number-parsing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/reading-files.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/sha1-hashes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/signals.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/spawning-processes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/url-parsing.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/writing-files.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +161,8 @@
     <MESSAGE value="worker-pools.go" />
     <MESSAGE value="mutexes.go" />
     <MESSAGE value="string-functions.go and etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="string-functions.go and etc" />
+    <MESSAGE value="random-numbers.go" />
+    <option name="LAST_COMMIT_MESSAGE" value="random-numbers.go" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="103" key="#GOPATH" timestamp="1578644353826">
@@ -173,14 +182,15 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="413" y="79" key="#go_build_helloworld.go/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644661875" />
-    <state x="179" y="-1062" key="CommitChangelistDialog2" timestamp="1579424948939">
-      <screen x="-222" y="-1080" width="1920" height="1080" />
+    <state x="301" y="15" key="CommitChangelistDialog2" timestamp="1580709629148">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="301" y="15" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916382342" />
     <state x="301" y="37" key="CommitChangelistDialog2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646346434" />
     <state x="301" y="15" key="CommitChangelistDialog2/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1579178119770" />
     <state x="179" y="-1062" key="CommitChangelistDialog2/-222.-1080.1920.1080/0.23.1440.877@-222.-1080.1920.1080" timestamp="1579424948939" />
     <state x="301" y="15" key="CommitChangelistDialog2/1440.-300.1048.770/-480.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578974189777" />
+    <state x="301" y="15" key="CommitChangelistDialog2/1440.130.1048.770/0.0.1440.900@0.0.1440.900" timestamp="1580709629148" />
     <state x="370" y="231" key="EditFileWatcherDialog" timestamp="1578644396973">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
@@ -230,14 +240,15 @@
     </state>
     <state x="221" y="75" key="SettingsEditor/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578644430848" />
     <state x="73" y="-1012" key="SettingsEditor/-222.-1080.1920.1080/0.0.1440.900@-222.-1080.1920.1080" timestamp="1579141098363" />
-    <state x="205" y="-877" key="Vcs.Push.Dialog.v2" timestamp="1579424955428">
-      <screen x="-222" y="-1080" width="1920" height="1080" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1580709635148">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1578916390833" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/-222.-1057.1920.1057/0.23.1440.827@0.23.1440.827" timestamp="1578646354224" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/-222.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1579178129819" />
     <state x="205" y="-877" key="Vcs.Push.Dialog.v2/-222.-1080.1920.1080/0.23.1440.877@-222.-1080.1920.1080" timestamp="1579424955428" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/1440.-300.1048.770/-480.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1578974199350" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/1440.130.1048.770/0.0.1440.900@0.0.1440.900" timestamp="1580709635148" />
     <state x="291" y="-845" width="894" height="812" key="search.everywhere.popup" timestamp="1579260929763">
       <screen x="-222" y="-1080" width="1920" height="1080" />
     </state>
